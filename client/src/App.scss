@@ -23,11 +23,11 @@ body {
   .login-heading {
     font-size: 2.4rem;
     margin: 1rem;
-    font-weight: bold;
+    font-weight: 500;
     color: #5d5b8d;
   }
 
-  .register{
+  .register {
     font-size: 1.5rem;
   }
 
@@ -46,10 +46,10 @@ body {
       border: none;
       margin: 1rem;
       font-size: 1.5rem;
-      border-bottom: 1px solid #5d5b8d;
+      border: 2px solid #a7bcff;
     }
     :focus {
-      outline-color: #5d5b8d;
+      outline: none;
     }
     ::placeholder {
       color: #afafaf;
@@ -71,9 +71,9 @@ body {
       width: 280px;
     }
   }
-  span{
+  span {
     font-size: 1.2rem;
-    a{
+    a {
       text-decoration: none;
       font-weight: bold;
     }
@@ -81,3 +81,94 @@ body {
 }
 
 //home
+.home {
+  .home-wrapper {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    .details {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 10px;
+      width: 420px;
+      height: 250px;
+      background-color: white;
+      gap: 2rem;
+      .heading {
+        color: #5d5b8d;
+        top: 12px;
+        position: absolute;
+        font-size: 3rem;
+        font-weight: 500;
+      }
+      .name,
+      .email {
+        font-size: 2rem;
+      }
+      span {
+        color: grey;
+      }
+      .log-out {
+        position: absolute;
+        margin: 2rem;
+        padding: 1rem;
+        border: none;
+        cursor: pointer;
+        margin: 1rem;
+        background-color: #a7bcff;
+        border-radius: 5px;
+        width: 280px;
+        color: #494646;
+        font-size: 1.5rem;
+        bottom: 0;
+      }
+    }
+    form {
+      background-color: white;
+      width: 420px;
+      height: 250px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .form-heading {
+        font-size: 3rem;
+        font-weight: 500;
+        margin: 1rem;
+        color: #5d5b8d;
+      }
+      input {
+        padding: 1rem;
+        width: 70%;
+        margin: 0.4rem;
+        border-radius: 5px;
+        border: none;
+        border: 2px solid #a7bcff;
+      }
+      :focus {
+        outline: none;
+      }
+      ::placeholder {
+        color: #afafaf;
+      }
+      .submit-btn {
+        padding: 1rem;
+        border: none;
+        cursor: pointer;
+        margin: 1rem;
+        background-color: #a7bcff;
+        border-radius: 5px;
+        width: 280px;
+        color: #494646;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
