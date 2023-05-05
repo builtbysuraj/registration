@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #a7bcff;
+}
+
+.form-wrapper {
+  margin: auto;
+  width: 400px;
+  overflow: hidden;
+
+  .login-heading {
+    font-size: 2.4rem;
+    margin: 1rem;
+    font-weight: bold;
+    color: #5d5b8d;
+  }
+
+  .register{
+    font-size: 1.5rem;
+  }
+
+  form {
+    height: 360px;
+    margin-top: 52%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 10px;
+    input {
+      padding: 1rem;
+      border-radius: 5px;
+      border: none;
+      margin: 1rem;
+      font-size: 1.5rem;
+      border-bottom: 1px solid #5d5b8d;
+    }
+    :focus {
+      outline-color: #5d5b8d;
+    }
+    ::placeholder {
+      color: #afafaf;
+    }
+    button {
+      padding: 1rem 3rem;
+      border: none;
+      cursor: pointer;
+      margin: 1rem;
+      background-color: #a7bcff;
+      border-radius: 5px;
+      width: 280px;
+      color: #494646;
+      font-size: 1.5rem;
+    }
+    .name,
+    .email,
+    .password {
+      width: 280px;
+    }
+  }
+  span{
+    font-size: 1.2rem;
+    a{
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}
+
+//home
