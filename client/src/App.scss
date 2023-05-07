@@ -97,7 +97,7 @@ body {
       flex-direction: column;
       border-radius: 10px;
       width: 420px;
-      height: 250px;
+      height: 270px;
       background-color: white;
       gap: 2rem;
       .heading {
@@ -132,7 +132,7 @@ body {
     form {
       background-color: white;
       width: 420px;
-      height: 250px;
+      height: 270px;
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -145,7 +145,8 @@ body {
         color: #5d5b8d;
       }
       input {
-        padding: 1rem;
+        font-size: 1.5rem;
+        padding: 1.2rem;
         width: 70%;
         margin: 0.4rem;
         border-radius: 5px;
@@ -165,7 +166,7 @@ body {
         margin: 1rem;
         background-color: #a7bcff;
         border-radius: 5px;
-        width: 280px;
+        width: 294px;
         color: #494646;
         font-size: 1.5rem;
       }
