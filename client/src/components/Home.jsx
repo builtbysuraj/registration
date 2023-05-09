@@ -1,4 +1,11 @@
-export default function Home() {
+import { Navigate } from "react-router-dom";
+
+export default function Home({ userData, setUserData }) {
+  if (!userData || !userData._id) {
+    return <Navigate to="/login" />;
+  }
+  const { name, email } = userData;
+  // console.log(userData);
   return (
     <div className="home">
       <div className="home-wrapper">
@@ -6,12 +13,14 @@ export default function Home() {
           <div className="heading">User Details</div>
           <div className="name">
             <span>Name: </span>
-            <em>MyName</em>
+            <em>{name}</em>
           </div>
           <div className="email">
-            <span>Email: </span> <em>example@gmail.com</em>
+            <span>Email: </span> <em>{email}</em>
           </div>
-          <button className="log-out">Log out</button>
+          <button onClick={() => setUserData({})} className="log-out">
+            Log out
+          </button>
         </div>
         <form>
           <div className="form-heading">Change password</div>

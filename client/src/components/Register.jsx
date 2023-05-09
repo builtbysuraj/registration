@@ -2,23 +2,37 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
+    if (name === "" || email === "" || password === "") {
+      toast.error("Please enter valid input");
+      return;
+    }
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/users/register",
+        "http://localhost:5005/api/users/register",
         {
           name,
           email,
           password,
         }
       );
-      toast.success(response.data.message);
+      toast.success("Registration successful | Please login");
+      // setTimeout(() => {
+      //   toast.success("Redirecting to home...");
+      //   setTimeout(() => {
+      //     navigate("/");
+      //   }, 1500);
+      // }, 1000);
+
+      localStorage.setItem("userId", response.data.userId);
     } catch (error) {
+      console.log("error");
       toast.error("An error occurred while registering the user.");
     }
   };
