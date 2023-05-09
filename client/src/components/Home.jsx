@@ -18,7 +18,7 @@ export default function Home({ userData, setUserData }) {
     // Make API call to server to update password
     try {
       const response = await axios.post(
-        "http://localhost:5005/api/users/change-password",
+        "https://user-registration-zpxs.onrender.com/api/users/change-password",
         {
           userId: userData._id,
           oldPassword,

@@ -15,7 +15,7 @@ export default function Register() {
     }
     try {
       const response = await axios.post(
-        "http://localhost:5005/api/users/register",
+        "https://user-registration-zpxs.onrender.com/api/users/register",
         {
           name,
           email,
