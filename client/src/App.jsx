@@ -20,7 +20,6 @@ export default function App() {
       localStorage.setItem("userData", JSON.stringify(userData));
     }
   }, [userData]);
-  console.log(userData);
   return (
     <BrowserRouter>
       <Routes>

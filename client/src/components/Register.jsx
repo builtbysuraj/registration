@@ -23,12 +23,6 @@ export default function Register() {
         }
       );
       toast.success("Registration successful | Please login");
-      // setTimeout(() => {
-      //   toast.success("Redirecting to home...");
-      //   setTimeout(() => {
-      //     navigate("/");
-      //   }, 1500);
-      // }, 1000);
 
       localStorage.setItem("userId", response.data.userId);
     } catch (error) {
