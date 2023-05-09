@@ -7,6 +7,7 @@ app.use(express.json())
 const userRoutes = require('./components/userRoutes');
 const URL = require("./components/config")
 app.use('/api/users', userRoutes);
+const port = process.env.PORT || 5005;
 
 // MongoDB
 mongoose.connect(URL, {
@@ -17,4 +18,4 @@ mongoose.connect(URL, {
   .catch(error => console.error('Database could not be connected:', error));
 
 // Express 
-app.listen(5005, console.log("Express working"))
+app.listen(port, console.log("Express working"))
