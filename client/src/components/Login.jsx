@@ -21,14 +21,13 @@ export default function Login({ setUserData }) {
           password,
         }
       );
-      console.log(response.data.message);
       if (response.data.message === "Login Successful") {
         toast.success(response.data.message);
         setUserData(response.data.user);
         navigate("/");
       } else toast.error(response.data.message);
     } catch (error) {
-      console.log(response.data.message);
+      toast.error(response.data.message);
     }
   };
 
